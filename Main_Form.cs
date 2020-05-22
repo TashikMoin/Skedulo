@@ -43,13 +43,7 @@ namespace CRUD_Operations_On_A_Desktop_Application
         private const int cGrip = 16;      
         private const int cCaption = 32;   
 
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            Rectangle rc = new Rectangle(this.ClientSize.Width - cGrip, this.ClientSize.Height - cGrip, cGrip, cGrip);
-            ControlPaint.DrawSizeGrip(e.Graphics, this.BackColor, rc);
-            rc = new Rectangle(0, 0, this.ClientSize.Width, cCaption);
-            e.Graphics.FillRectangle(Brushes.DarkBlue, rc);
-        }
+        
 
         protected override void WndProc(ref Message m)
         {
@@ -81,7 +75,14 @@ namespace CRUD_Operations_On_A_Desktop_Application
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
