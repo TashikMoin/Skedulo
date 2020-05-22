@@ -1,0 +1,12 @@
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\bin\Debug\CRUD_Operations_On_A_Desktop_Application.exe.config
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\bin\Debug\CRUD_Operations_On_A_Desktop_Application.exe
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\bin\Debug\CRUD_Operations_On_A_Desktop_Application.pdb
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.csprojAssemblyReference.cache
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.Main_Form.resources
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.Properties.Resources.resources
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.csproj.GenerateResource.cache
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.csproj.CoreCompileInputs.cache
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.exe
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.pdb
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\bin\Debug\MetroFramework.dll
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.csproj.CopyComplete
