@@ -41,24 +41,27 @@ namespace CRUD_Operations_On_A_Desktop_Application
         public static extern bool ReleaseCapture();
 
         private const int cGrip = 16;      
-        private const int cCaption = 32;   
+        private const int cCaption = 32;
 
-        
-
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Rectangle rc = new Rectangle(this.ClientSize.Width - cGrip, this.ClientSize.Height - cGrip, cGrip, cGrip); // remove this onpaint method  to remove default panel
+            ControlPaint.DrawSizeGrip(e.Graphics, this.BackColor, rc);
+        }
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == 0x84)
-            {  
+            {  // Trap WM_NCHITTEST
                 Point pos = new Point(m.LParam.ToInt32());
                 pos = this.PointToClient(pos);
                 if (pos.Y < cCaption)
                 {
-                    m.Result = (IntPtr)2;  
+                    m.Result = (IntPtr)2;  // HTCAPTION
                     return;
                 }
                 if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
                 {
-                    m.Result = (IntPtr)17; 
+                    m.Result = (IntPtr)17; // HTBOTTOMRIGHT
                     return;
                 }
             }
@@ -67,7 +70,8 @@ namespace CRUD_Operations_On_A_Desktop_Application
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
-
+            EmployeeDataContext Data_Object = new EmployeeDataContext();
+            Data_Grid.DataSource = Data_Object.EmployeeTables;
         }
 
         private void Main_Form_Resize(object sender, EventArgs e)
@@ -111,6 +115,16 @@ namespace CRUD_Operations_On_A_Desktop_Application
         private void Minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Update_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Insert_Button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
