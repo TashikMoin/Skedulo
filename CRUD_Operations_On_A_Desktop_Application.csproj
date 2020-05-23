@@ -63,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Employee.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Insert_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insert_Form.Designer.cs">
+      <DependentUpon>Insert_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Round_Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Insert_Form.resx">
+      <DependentUpon>Insert_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </EmbeddedResource>

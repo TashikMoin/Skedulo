@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Data.Linq ;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,9 @@ namespace CRUD_Operations_On_A_Desktop_Application
 {
     public partial class Main_Form : Form
     {
+        public EmployeeDataContext Data_Object;
+        public Table<EmployeeTable> EmployeeTable;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -70,8 +74,9 @@ namespace CRUD_Operations_On_A_Desktop_Application
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
-            EmployeeDataContext Data_Object = new EmployeeDataContext();
-            Data_Grid.DataSource = Data_Object.EmployeeTables;
+            Data_Object = new EmployeeDataContext();
+            EmployeeTable = Data_Object.EmployeeTables;
+            Data_Grid.DataSource = EmployeeTable ;
         }
 
         private void Main_Form_Resize(object sender, EventArgs e)
@@ -123,6 +128,12 @@ namespace CRUD_Operations_On_A_Desktop_Application
         }
 
         private void Insert_Button_Click(object sender, EventArgs e)
+        {
+            Insert_Form Insert = new Insert_Form( Data_Object , EmployeeTable );
+            Insert.Show();
+        }
+
+        private void Delete_Button_Click(object sender, EventArgs e)
         {
 
         }
