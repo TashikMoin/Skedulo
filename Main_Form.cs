@@ -90,5 +90,27 @@ namespace CRUD_Operations_On_A_Desktop_Application
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void Cross_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void Maximize_Click(object sender, EventArgs e)
+        {
+            if(this.WindowState != FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
