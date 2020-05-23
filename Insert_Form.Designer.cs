@@ -164,7 +164,7 @@
             this.Salary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Salary.AutoSize = true;
             this.Salary.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salary.Location = new System.Drawing.Point(83, 343);
+            this.Salary.Location = new System.Drawing.Point(72, 343);
             this.Salary.Name = "Salary";
             this.Salary.Size = new System.Drawing.Size(94, 36);
             this.Salary.TabIndex = 31;
@@ -251,7 +251,7 @@
             this.Name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Name.AutoSize = true;
             this.Name.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name.Location = new System.Drawing.Point(85, 214);
+            this.Name.Location = new System.Drawing.Point(79, 211);
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(87, 36);
             this.Name.TabIndex = 25;
@@ -262,7 +262,7 @@
             this.Id.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Id.AutoSize = true;
             this.Id.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id.Location = new System.Drawing.Point(138, 149);
+            this.Id.Location = new System.Drawing.Point(127, 146);
             this.Id.Name = "Id";
             this.Id.Size = new System.Drawing.Size(39, 36);
             this.Id.TabIndex = 24;

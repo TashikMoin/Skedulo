@@ -26,7 +26,7 @@ namespace CRUD_Operations_On_A_Desktop_Application
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public Insert_Form(EmployeeDataContext Data_Object_, Table<EmployeeTable> EmployeeTable_)
+        public Insert_Form(ref EmployeeDataContext Data_Object_, ref Table<EmployeeTable> EmployeeTable_)
         {
             InitializeComponent();
             Data_Object = Data_Object_;
@@ -34,7 +34,7 @@ namespace CRUD_Operations_On_A_Desktop_Application
             Employee = new EmployeeTable();
         }
 
-        void Clear()
+        void Clear( string From)
         {
             Id_Textbox.Text = "";
             Name_Textbox.Text = "";
@@ -42,6 +42,10 @@ namespace CRUD_Operations_On_A_Desktop_Application
             JobRole_Textbox.Text = "";
             Salary_Textbox.Text = "";
             Id_Textbox.Focus();
+            if( From == "Insert" )
+            {
+                this.Close() ;
+            }
         }
 
         private void Insert_Button_Click(object sender, EventArgs e)
@@ -54,12 +58,12 @@ namespace CRUD_Operations_On_A_Desktop_Application
             Data_Object.EmployeeTables.InsertOnSubmit(Employee); // Data that is to be submitted is now in pending state
             Data_Object.SubmitChanges();
             MessageBox.Show(" Data Has Been Inserted Successfully. ");
-            Clear();
+            Clear("Insert");
         }
 
         private void ClearAll_Button_Click(object sender, EventArgs e)
         {
-            Clear();
+            Clear("Clear");
         }
 
         private void Cross_Click(object sender, EventArgs e)
@@ -75,5 +79,6 @@ namespace CRUD_Operations_On_A_Desktop_Application
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
     }
 }

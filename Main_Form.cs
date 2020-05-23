@@ -72,11 +72,16 @@ namespace CRUD_Operations_On_A_Desktop_Application
             base.WndProc(ref m);
         }
 
-        private void Main_Form_Load(object sender, EventArgs e)
+        public void Load_Data()
         {
             Data_Object = new EmployeeDataContext();
             EmployeeTable = Data_Object.EmployeeTables;
-            Data_Grid.DataSource = EmployeeTable ;
+            Data_Grid.DataSource = EmployeeTable;
+        }
+
+        private void Main_Form_Load(object sender, EventArgs e)
+        {
+            Load_Data();
         }
 
         private void Main_Form_Resize(object sender, EventArgs e)
@@ -84,12 +89,6 @@ namespace CRUD_Operations_On_A_Desktop_Application
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
         }
 
-        
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void TitleBar_MouseDown(object sender, MouseEventArgs e)
         {
@@ -129,8 +128,9 @@ namespace CRUD_Operations_On_A_Desktop_Application
 
         private void Insert_Button_Click(object sender, EventArgs e)
         {
-            Insert_Form Insert = new Insert_Form( Data_Object , EmployeeTable );
-            Insert.Show();
+            Insert_Form Insert = new Insert_Form( ref Data_Object , ref EmployeeTable );
+            Insert.ShowDialog();
+            Load_Data();
         }
 
         private void Delete_Button_Click(object sender, EventArgs e)
