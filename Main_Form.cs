@@ -123,12 +123,20 @@ namespace CRUD_Operations_On_A_Desktop_Application
 
         private void Update_Button_Click(object sender, EventArgs e)
         {
-
+            Insert_Form Insert = new Insert_Form(ref Data_Object , ref EmployeeTable , "Update" , Data_Grid.SelectedRows[0].Cells[0].Value.ToString() );
+            Insert.Id_Textbox.Text = Data_Grid.SelectedRows[0].Cells[0].Value.ToString() ;
+            Insert.Name_Textbox.Text = Data_Grid.SelectedRows[0].Cells[1].Value.ToString();
+            Insert.Experience_Textbox.Text = Data_Grid.SelectedRows[0].Cells[2].Value.ToString();
+            Insert.Salary_Textbox.Text = Data_Grid.SelectedRows[0].Cells[3].Value.ToString();
+            Insert.JobRole_Textbox.Text = Data_Grid.SelectedRows[0].Cells[4].Value.ToString();          
+            Insert.Insert_Button.LabelText = "Update" ;
+            Insert.ShowDialog();
+            Load_Data();
         }
 
         private void Insert_Button_Click(object sender, EventArgs e)
         {
-            Insert_Form Insert = new Insert_Form( ref Data_Object , ref EmployeeTable );
+            Insert_Form Insert = new Insert_Form( ref Data_Object , ref EmployeeTable , "Insert" );
             Insert.ShowDialog();
             Load_Data();
         }

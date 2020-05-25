@@ -34,19 +34,19 @@
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.JobRole = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.JobRole_Label = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.JobRole_Textbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.Salary = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Experience = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Salary_Label = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Experience_Label = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Salary_Textbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.Experience_Textbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.Name_Textbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.Header = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Name = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Id = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Id_Label = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Id_Textbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.TitleBar = new System.Windows.Forms.TableLayoutPanel();
             this.Cross = new Bunifu.Framework.UI.BunifuTileButton();
+            this.Name_Label = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.TitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,16 +130,16 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // JobRole
+            // JobRole_Label
             // 
-            this.JobRole.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.JobRole.AutoSize = true;
-            this.JobRole.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JobRole.Location = new System.Drawing.Point(55, 408);
-            this.JobRole.Name = "JobRole";
-            this.JobRole.Size = new System.Drawing.Size(113, 36);
-            this.JobRole.TabIndex = 33;
-            this.JobRole.Text = "&JobRole";
+            this.JobRole_Label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.JobRole_Label.AutoSize = true;
+            this.JobRole_Label.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JobRole_Label.Location = new System.Drawing.Point(55, 408);
+            this.JobRole_Label.Name = "JobRole_Label";
+            this.JobRole_Label.Size = new System.Drawing.Size(113, 36);
+            this.JobRole_Label.TabIndex = 33;
+            this.JobRole_Label.Text = "&JobRole";
             // 
             // JobRole_Textbox
             // 
@@ -159,27 +159,27 @@
             this.JobRole_Textbox.TabIndex = 32;
             this.JobRole_Textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // Salary
+            // Salary_Label
             // 
-            this.Salary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Salary.AutoSize = true;
-            this.Salary.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salary.Location = new System.Drawing.Point(72, 343);
-            this.Salary.Name = "Salary";
-            this.Salary.Size = new System.Drawing.Size(94, 36);
-            this.Salary.TabIndex = 31;
-            this.Salary.Text = "&Salary";
+            this.Salary_Label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Salary_Label.AutoSize = true;
+            this.Salary_Label.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salary_Label.Location = new System.Drawing.Point(72, 343);
+            this.Salary_Label.Name = "Salary_Label";
+            this.Salary_Label.Size = new System.Drawing.Size(94, 36);
+            this.Salary_Label.TabIndex = 31;
+            this.Salary_Label.Text = "&Salary";
             // 
-            // Experience
+            // Experience_Label
             // 
-            this.Experience.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Experience.AutoSize = true;
-            this.Experience.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Experience.Location = new System.Drawing.Point(17, 280);
-            this.Experience.Name = "Experience";
-            this.Experience.Size = new System.Drawing.Size(149, 36);
-            this.Experience.TabIndex = 30;
-            this.Experience.Text = "&Experience";
+            this.Experience_Label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Experience_Label.AutoSize = true;
+            this.Experience_Label.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Experience_Label.Location = new System.Drawing.Point(17, 280);
+            this.Experience_Label.Name = "Experience_Label";
+            this.Experience_Label.Size = new System.Drawing.Size(149, 36);
+            this.Experience_Label.TabIndex = 30;
+            this.Experience_Label.Text = "&Experience";
             // 
             // Salary_Textbox
             // 
@@ -246,27 +246,16 @@
             this.Header.TabIndex = 26;
             this.Header.Text = "Employee Data";
             // 
-            // Name
+            // Id_Label
             // 
-            this.Name.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Name.AutoSize = true;
-            this.Name.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name.Location = new System.Drawing.Point(79, 211);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(87, 36);
-            this.Name.TabIndex = 25;
-            this.Name.Text = "&Name";
-            // 
-            // Id
-            // 
-            this.Id.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Id.AutoSize = true;
-            this.Id.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id.Location = new System.Drawing.Point(127, 146);
-            this.Id.Name = "Id";
-            this.Id.Size = new System.Drawing.Size(39, 36);
-            this.Id.TabIndex = 24;
-            this.Id.Text = "&Id";
+            this.Id_Label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Id_Label.AutoSize = true;
+            this.Id_Label.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id_Label.Location = new System.Drawing.Point(127, 154);
+            this.Id_Label.Name = "Id_Label";
+            this.Id_Label.Size = new System.Drawing.Size(39, 36);
+            this.Id_Label.TabIndex = 24;
+            this.Id_Label.Text = "&Id";
             // 
             // Id_Textbox
             // 
@@ -285,6 +274,7 @@
             this.Id_Textbox.Size = new System.Drawing.Size(294, 48);
             this.Id_Textbox.TabIndex = 23;
             this.Id_Textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Id_Textbox.Leave += new System.EventHandler(this.Id_Textbox_Leave);
             // 
             // TitleBar
             // 
@@ -327,32 +317,44 @@
             this.Cross.TabIndex = 1;
             this.Cross.Click += new System.EventHandler(this.Cross_Click);
             // 
+            // Name_Label
+            // 
+            this.Name_Label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Name_Label.AutoSize = true;
+            this.Name_Label.Font = new System.Drawing.Font("Poor Richard", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_Label.Location = new System.Drawing.Point(79, 217);
+            this.Name_Label.Name = "Name_Label";
+            this.Name_Label.Size = new System.Drawing.Size(87, 36);
+            this.Name_Label.TabIndex = 39;
+            this.Name_Label.Text = "&Name";
+            // 
             // Insert_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.ClientSize = new System.Drawing.Size(600, 665);
+            this.Controls.Add(this.Name_Label);
             this.Controls.Add(this.ClearAll_Button);
             this.Controls.Add(this.Insert_Button);
             this.Controls.Add(this.bunifuSeparator3);
             this.Controls.Add(this.bunifuSeparator2);
             this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.JobRole);
+            this.Controls.Add(this.JobRole_Label);
             this.Controls.Add(this.JobRole_Textbox);
-            this.Controls.Add(this.Salary);
-            this.Controls.Add(this.Experience);
+            this.Controls.Add(this.Salary_Label);
+            this.Controls.Add(this.Experience_Label);
             this.Controls.Add(this.Salary_Textbox);
             this.Controls.Add(this.Experience_Textbox);
             this.Controls.Add(this.Name_Textbox);
             this.Controls.Add(this.Header);
-            this.Controls.Add(this.Name);
-            this.Controls.Add(this.Id);
+            this.Controls.Add(this.Id_Label);
             this.Controls.Add(this.Id_Textbox);
             this.Controls.Add(this.TitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(600, 665);
             this.MinimumSize = new System.Drawing.Size(600, 665);
+            this.Name = "Insert_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -361,24 +363,23 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuTileButton ClearAll_Button;
-        private Bunifu.Framework.UI.BunifuTileButton Insert_Button;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private Bunifu.Framework.UI.BunifuCustomLabel JobRole;
-        private Bunifu.Framework.UI.BunifuMetroTextbox JobRole_Textbox;
-        private Bunifu.Framework.UI.BunifuCustomLabel Salary;
-        private Bunifu.Framework.UI.BunifuCustomLabel Experience;
-        private Bunifu.Framework.UI.BunifuMetroTextbox Salary_Textbox;
-        private Bunifu.Framework.UI.BunifuMetroTextbox Experience_Textbox;
-        private Bunifu.Framework.UI.BunifuMetroTextbox Name_Textbox;
-        private Bunifu.Framework.UI.BunifuCustomLabel Header;
-        private Bunifu.Framework.UI.BunifuCustomLabel Name;
-        private Bunifu.Framework.UI.BunifuCustomLabel Id;
-        private Bunifu.Framework.UI.BunifuMetroTextbox Id_Textbox;
-        private System.Windows.Forms.TableLayoutPanel TitleBar;
         private Bunifu.Framework.UI.BunifuTileButton Cross;
+        internal Bunifu.Framework.UI.BunifuCustomLabel Name_Label;
+        internal Bunifu.Framework.UI.BunifuTileButton ClearAll_Button;
+        internal Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
+        internal Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
+        internal Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
+        internal Bunifu.Framework.UI.BunifuCustomLabel JobRole_Label;
+        internal Bunifu.Framework.UI.BunifuCustomLabel Salary_Label;
+        internal Bunifu.Framework.UI.BunifuCustomLabel Experience_Label;
+        internal Bunifu.Framework.UI.BunifuCustomLabel Header;
+        internal Bunifu.Framework.UI.BunifuCustomLabel Id_Label;
+        internal System.Windows.Forms.TableLayoutPanel TitleBar;
+        internal Bunifu.Framework.UI.BunifuMetroTextbox JobRole_Textbox;
+        internal Bunifu.Framework.UI.BunifuMetroTextbox Salary_Textbox;
+        internal Bunifu.Framework.UI.BunifuMetroTextbox Experience_Textbox;
+        internal Bunifu.Framework.UI.BunifuMetroTextbox Name_Textbox;
+        internal Bunifu.Framework.UI.BunifuMetroTextbox Id_Textbox;
+        internal Bunifu.Framework.UI.BunifuTileButton Insert_Button;
     }
 }

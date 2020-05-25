@@ -36,6 +36,9 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\C# UI Frameworks\Bunifu Framework\Cracked\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="LollipoUi">
+      <HintPath>..\C# UI Frameworks\Lollipop Framework\LollipoUi.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>..\C# UI Frameworks\MetroFramework\lib\net\MetroFramework.dll</HintPath>
     </Reference>

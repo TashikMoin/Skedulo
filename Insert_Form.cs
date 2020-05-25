@@ -17,6 +17,8 @@ namespace CRUD_Operations_On_A_Desktop_Application
         public EmployeeDataContext Data_Object;
         public Table<EmployeeTable> EmployeeTable;
         public EmployeeTable Employee;
+        public string From;
+        public string Id;
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -26,11 +28,13 @@ namespace CRUD_Operations_On_A_Desktop_Application
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public Insert_Form(ref EmployeeDataContext Data_Object_, ref Table<EmployeeTable> EmployeeTable_)
+        public Insert_Form(ref EmployeeDataContext Data_Object_, ref Table<EmployeeTable> EmployeeTable_ , string From_ , string Id_ = "" )
         {
             InitializeComponent();
             Data_Object = Data_Object_;
             EmployeeTable = EmployeeTable_;
+            From = From_;
+            Id = Id_;
             Employee = new EmployeeTable();
         }
 
@@ -42,7 +46,7 @@ namespace CRUD_Operations_On_A_Desktop_Application
             JobRole_Textbox.Text = "";
             Salary_Textbox.Text = "";
             Id_Textbox.Focus();
-            if( From == "Insert" )
+            if( From == "Insert" || From == "Update" )
             {
                 this.Close() ;
             }
@@ -50,15 +54,35 @@ namespace CRUD_Operations_On_A_Desktop_Application
 
         private void Insert_Button_Click(object sender, EventArgs e)
         {
-            Employee.Id = int.Parse(Id_Textbox.Text);
-            Employee.Name = Name_Textbox.Text;
-            Employee.Experience_In_Years = Experience_Textbox.Text;
-            Employee.JobRole = JobRole_Textbox.Text;
-            Employee.Salary = int.Parse(Salary_Textbox.Text);
-            Data_Object.EmployeeTables.InsertOnSubmit(Employee); // Data that is to be submitted is now in pending state
-            Data_Object.SubmitChanges();
-            MessageBox.Show(" Data Has Been Inserted Successfully. ");
-            Clear("Insert");
+            if( From == "Insert" )
+            {
+                Employee.Id = int.Parse(Id_Textbox.Text);
+                Employee.Name = Name_Textbox.Text;
+                Employee.Experience_In_Years = Experience_Textbox.Text;
+                Employee.JobRole = JobRole_Textbox.Text;
+                Employee.Salary = int.Parse(Salary_Textbox.Text);
+                Data_Object.EmployeeTables.InsertOnSubmit(Employee); // Data that is to be submitted is now in pending state
+                Data_Object.SubmitChanges();
+                MessageBox.Show(" Data Has Been Inserted Successfully. ");
+                Clear("Insert");
+            }
+            else if( From == "Update" )
+            {
+                EmployeeTable Employee = Data_Object.EmployeeTables.SingleOrDefault(X=>X.Id == int.Parse(Id_Textbox.Text) );
+                Employee.Id = int.Parse(Id_Textbox.Text.ToString());
+                Employee.Name = Name_Textbox.Text.ToString();
+                Employee.Salary = decimal.Parse(Salary_Textbox.Text.ToString());
+                Employee.JobRole = JobRole_Textbox.Text.ToString();
+                Employee.Experience_In_Years = Experience_Textbox.Text.ToString();
+                Data_Object.SubmitChanges();
+                MessageBox.Show(" Data Has Been Updated. ");
+                Clear("Update");
+
+            }
+            else
+            {
+                MessageBox.Show(" An Error Occured, Please Try Again ");
+            }
         }
 
         private void ClearAll_Button_Click(object sender, EventArgs e)
@@ -80,5 +104,12 @@ namespace CRUD_Operations_On_A_Desktop_Application
             }
         }
 
+        private void Id_Textbox_Leave(object sender, EventArgs e)
+        {
+            if( Id_Textbox.Text.ToString() != Id )
+            {
+                Id_Textbox.Text = Id;
+            }
+        }
     }
 }
