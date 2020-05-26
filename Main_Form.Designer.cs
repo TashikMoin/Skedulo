@@ -236,7 +236,7 @@
             this.Insert_Button.ImageZoom = 80;
             this.Insert_Button.LabelPosition = 30;
             this.Insert_Button.LabelText = "Insert";
-            this.Insert_Button.Location = new System.Drawing.Point(287, 548);
+            this.Insert_Button.Location = new System.Drawing.Point(282, 548);
             this.Insert_Button.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Insert_Button.Name = "Insert_Button";
             this.Insert_Button.Size = new System.Drawing.Size(85, 120);
@@ -258,7 +258,7 @@
             this.Update_Button.ImageZoom = 80;
             this.Update_Button.LabelPosition = 30;
             this.Update_Button.LabelText = "Update";
-            this.Update_Button.Location = new System.Drawing.Point(462, 548);
+            this.Update_Button.Location = new System.Drawing.Point(457, 548);
             this.Update_Button.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Update_Button.Name = "Update_Button";
             this.Update_Button.Size = new System.Drawing.Size(85, 120);
@@ -280,7 +280,7 @@
             this.Delete_Button.ImageZoom = 80;
             this.Delete_Button.LabelPosition = 30;
             this.Delete_Button.LabelText = "Delete";
-            this.Delete_Button.Location = new System.Drawing.Point(636, 548);
+            this.Delete_Button.Location = new System.Drawing.Point(631, 548);
             this.Delete_Button.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Delete_Button.Name = "Delete_Button";
             this.Delete_Button.Size = new System.Drawing.Size(85, 120);
@@ -302,6 +302,7 @@
             this.Controls.Add(this.Employee_Picture);
             this.Controls.Add(this.TitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1000, 650);
@@ -325,10 +326,10 @@
         private System.Windows.Forms.TableLayoutPanel TitleBar;
         private System.Windows.Forms.PictureBox Employee_Picture;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private MetroFramework.Controls.MetroGrid Data_Grid;
         private Bunifu.Framework.UI.BunifuTileButton Insert_Button;
         private Bunifu.Framework.UI.BunifuTileButton Update_Button;
         private Bunifu.Framework.UI.BunifuTileButton Delete_Button;
+        public MetroFramework.Controls.MetroGrid Data_Grid;
     }
 }
 

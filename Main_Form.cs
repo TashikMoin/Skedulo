@@ -123,15 +123,27 @@ namespace CRUD_Operations_On_A_Desktop_Application
 
         private void Update_Button_Click(object sender, EventArgs e)
         {
-            Insert_Form Insert = new Insert_Form(ref Data_Object , ref EmployeeTable , "Update" , Data_Grid.SelectedRows[0].Cells[0].Value.ToString() );
-            Insert.Id_Textbox.Text = Data_Grid.SelectedRows[0].Cells[0].Value.ToString() ;
-            Insert.Name_Textbox.Text = Data_Grid.SelectedRows[0].Cells[1].Value.ToString();
-            Insert.Experience_Textbox.Text = Data_Grid.SelectedRows[0].Cells[2].Value.ToString();
-            Insert.Salary_Textbox.Text = Data_Grid.SelectedRows[0].Cells[3].Value.ToString();
-            Insert.JobRole_Textbox.Text = Data_Grid.SelectedRows[0].Cells[4].Value.ToString();          
-            Insert.Insert_Button.LabelText = "Update" ;
-            Insert.ShowDialog();
-            Load_Data();
+            if (Data_Grid.SelectedRows.Count == 1)
+            {
+                Insert_Form Insert = new Insert_Form(ref Data_Object, ref EmployeeTable, "Update", Data_Grid.SelectedRows[0].Cells[0].Value.ToString());
+                Insert.Id_Textbox.Text = Data_Grid.SelectedRows[0].Cells[0].Value.ToString();
+                Insert.Name_Textbox.Text = Data_Grid.SelectedRows[0].Cells[1].Value.ToString();
+                Insert.Experience_Textbox.Text = Data_Grid.SelectedRows[0].Cells[2].Value.ToString();
+                Insert.Salary_Textbox.Text = Data_Grid.SelectedRows[0].Cells[3].Value.ToString();
+                Insert.JobRole_Textbox.Text = Data_Grid.SelectedRows[0].Cells[4].Value.ToString();
+                Insert.Insert_Button.LabelText = "Update";
+                Insert.ClearAll_Button.Enabled = false ;
+                Insert.ShowDialog();
+                Load_Data();
+            }
+            else if (Data_Grid.SelectedRows.Count == 0)
+            {
+                MessageBox.Show(" Please Select An Employee Record To Update. ");
+            }
+            else
+            {
+                MessageBox.Show(" Please Select A Single Employee To Update At A Time. ");
+            }
         }
 
         private void Insert_Button_Click(object sender, EventArgs e)
@@ -143,7 +155,20 @@ namespace CRUD_Operations_On_A_Desktop_Application
 
         private void Delete_Button_Click(object sender, EventArgs e)
         {
-
+            if( Data_Grid.SelectedRows.Count > 0 )
+            {
+                if( MessageBox.Show("Are You Sure Do You Want To Delete ? " , "Confirmation" , MessageBoxButtons.YesNo , MessageBoxIcon.Question  ) == DialogResult.Yes )
+                {
+                    for( int Record = 0; Record < Data_Grid.SelectedRows.Count; ++Record )
+                    {
+                        int Emp_Id = Convert.ToInt32(Data_Grid.SelectedRows[Record].Cells[0].Value);
+                        EmployeeTable Employee = Data_Object.EmployeeTables.SingleOrDefault(Emp => Emp.Id == Emp_Id);
+                        Data_Object.EmployeeTables.DeleteOnSubmit(Employee);
+                        Data_Object.SubmitChanges();
+                    }
+                    Load_Data();
+                }
+            }
         }
     }
 }

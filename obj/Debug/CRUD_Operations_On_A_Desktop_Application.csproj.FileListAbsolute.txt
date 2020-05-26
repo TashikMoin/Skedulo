@@ -10,6 +10,6 @@ C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRU
 C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\bin\Debug\MetroFramework.dll
 C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.csproj.CopyComplete
 C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\bin\Debug\Bunifu_UI_v1.5.3.dll
-C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.csprojAssemblyReference.cache
 C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.Insert_Form.resources
 C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\bin\Debug\LollipoUi.dll
+C:\Tashik\My_Resources\C#\CRUD_Operations_On_A_Desktop_Application\obj\Debug\CRUD_Operations_On_A_Desktop_Application.csprojAssemblyReference.cache

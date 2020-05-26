@@ -77,7 +77,6 @@ namespace CRUD_Operations_On_A_Desktop_Application
                 Data_Object.SubmitChanges();
                 MessageBox.Show(" Data Has Been Updated. ");
                 Clear("Update");
-
             }
             else
             {
@@ -95,7 +94,7 @@ namespace CRUD_Operations_On_A_Desktop_Application
             this.Close();
         }
 
-        private void TitleBar_MouseDown(object sender, MouseEventArgs e)
+private void TitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -106,7 +105,7 @@ namespace CRUD_Operations_On_A_Desktop_Application
 
         private void Id_Textbox_Leave(object sender, EventArgs e)
         {
-            if( Id_Textbox.Text.ToString() != Id )
+            if( ( Id_Textbox.Text.ToString() != Id ) && From == "Update" )
             {
                 Id_Textbox.Text = Id;
             }
