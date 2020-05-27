@@ -32,5 +32,27 @@ namespace CRUD_Operations_On_A_Desktop_Application.Properties {
                 return ((string)(this["EmployeeConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tashikdb.database.windows.net;Initial Catalog=Employee;User ID=tashik" +
+            "")]
+        public string EmployeeConnectionString1 {
+            get {
+                return ((string)(this["EmployeeConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tashikdb.database.windows.net;Initial Catalog=Employee;User ID=tashik" +
+            ";Password=33119Vq6")]
+        public string EmployeeConnectionString2 {
+            get {
+                return ((string)(this["EmployeeConnectionString2"]));
+            }
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace CRUD_Operations_On_A_Desktop_Application
     #endregion
 		
 		public EmployeeDataContext() : 
-				base(global::CRUD_Operations_On_A_Desktop_Application.Properties.Settings.Default.EmployeeConnectionString, mappingSource)
+				base(global::CRUD_Operations_On_A_Desktop_Application.Properties.Settings.Default.EmployeeConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
